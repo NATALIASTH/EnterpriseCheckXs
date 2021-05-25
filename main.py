@@ -119,7 +119,7 @@ def find_onSearcher(str):
                     f.write('\n')
                     f.write("________________________")
                     f.write('\n')
-                    print('ha entrado')
+                
                     n = n + 1
 
                 main()

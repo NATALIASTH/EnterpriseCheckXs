@@ -97,10 +97,15 @@ def find_onSearcher(str):
 
         #opcion de no ampliar
         nextpage = input("+ pages? Y / N")
-        if nextpage == 'N':
+        if nextpage == 'Y':
+            driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
+            time.sleep(1)
+            driver.find_element_by_class_name("artdeco-pagination__button--next").click()
+        elif nextpage == 'N':
             n = 1
             txt = input("do you want to save it on a .txt yes/no  no=menu:  ")
             if txt == 'yes':
+                print('entro')
                 f = open("Linkedin.txt", "w")
                 for varaux in auxtxt:
                     f.write("Name: ")
@@ -117,12 +122,8 @@ def find_onSearcher(str):
                     print('ha entrado')
                     n = n + 1
 
-
-            else:
                 main()
-        driver.execute_script("window.scrollTo(0, document.body.scrollHeight);")
-        time.sleep(1)
-        driver.find_element_by_class_name("artdeco-pagination__button--next").click()
+
 
 
 def main():
@@ -150,7 +151,8 @@ def main():
     option = input('-----------------OPTIONS MENU-------------------' '\n'
                    'PRESS 1 TO SEARCH PEOPLE THAT WORK IN THE GIVEN ENTERPRISE'
                    '\n'
-                   'PRESS 2 TO SEARCH FOR DOMAINS AND ASN RELATED INFORMATION' '\n')
+                   'PRESS 2 TO SEARCH FOR DOMAINS AND ASN RELATED INFORMATION' '\n' 
+                   'PRESS 3 TO EXIT')
     print(option)
 
     if option == '1':
@@ -159,8 +161,8 @@ def main():
 
     elif option == '2':
         ipv4scrap(str)
-    elif option == 'exit':
-        exit()
+    elif option == '3':
+        sys.exit('SEE YOU SOON')
 
     else:
         print("INVALID INFORMATION, TRY AGAIN")

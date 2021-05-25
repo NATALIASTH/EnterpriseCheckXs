@@ -4,6 +4,8 @@
 # ATENTION!
 Every time is scraping the window has to be in an active window if it is on seconds windows may not work.
 
+Files will appear when the execution is done.
+
 Created by:NataliaSTH
 
 # STEPS
@@ -70,4 +72,4 @@ If no exit
 Option 2:
 Scraping from ipv4 info the scraping will show all the domains,ASN,description,enterprise..
 It will also ask to save it on a txt or exit
-
+__

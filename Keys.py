@@ -1,4 +1,4 @@
-linkedin_username="user "
+linkedin_username="user"
 lnkdn_pwd="password"
 
 
